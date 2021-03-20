@@ -1,0 +1,112 @@
+.hero {
+	position: relative;
+	height: 100vh;
+	background-image: url("./background-sujan.jpg");
+	background-size: cover;
+	background-position: 50% 70%;
+
+	&-container {
+		width: 60%;
+		height: 60%;
+		margin: 0 auto;
+		padding-top: 5rem;
+		flex-direction: column;
+		&-info {
+			h3 {
+				position: relative;
+				color: rgb(214, 30, 159);
+				font-size: 0.875rem;
+				letter-spacing: 3px;
+				text-transform: uppercase;
+				&::before {
+					content: "";
+					position: absolute;
+					height: 2px;
+					width: 1rem;
+					left: -20px;
+					background-color: rgb(214, 30, 159);
+				}
+			}
+			h1 {
+				color: white;
+				font-size: 2rem;
+				line-height: 1.5;
+				font-family: "Adamina", serif;
+				font-weight: 400;
+				letter-spacing: 2px;
+				span {
+					&.info {
+						animation-name: fadeinandout;
+						animation-duration: 2s;
+						animation-timing-function: ease-in-out;
+					}
+					&.none {
+						display: none;
+					}
+				}
+			}
+		}
+		&-button {
+			display: flex;
+			flex-wrap: wrap;
+			// margin-top: 6rem;
+			a {
+				border: 1.5px solid white;
+				color: white;
+				background-color: transparent;
+				padding: 0.625rem 0.875rem;
+				font-family: "Nunito", sans-serif;
+				font-weight: bold;
+				font-size: 0.625rem;
+				text-decoration: none;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				margin-right: 1rem;
+				margin-bottom: 1rem;
+				cursor: pointer;
+			}
+		}
+	}
+}
+@keyframes fadeinandout {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@media screen and (max-width: 860px) {
+	.hero-container-info {
+		h3 {
+			font-size: 0.75rem;
+		}
+		h1 {
+			font-size: 1.5rem;
+		}
+	}
+	.hero-container {
+		a {
+			font-size: 0.5rem;
+			padding: 0.5rem 0.625rem;
+			border-width: 1.5px;
+		}
+	}
+}
+@media screen and (max-width: 486px) {
+	.hero-container-info {
+		h3 {
+			font-size: 0.625rem;
+		}
+		h1 {
+			font-size: 1.2rem;
+		}
+	}
+	.hero-container {
+		a {
+			font-size: 0.5rem;
+			padding: 0.5rem 0.625rem;
+			border-width: 1.5px;
+		}
+	}
+}

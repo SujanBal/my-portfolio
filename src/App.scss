@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 100%;
+}
+body {
+	&.open {
+		overflow: hidden;
+	}
+	font-size: 100%;
+	font-family: "Nunito", sans-serif;
+	color: gray;
+}
+.flex {
+	display: flex;
+	&-jc-sb {
+		justify-content: space-between;
+	}
+	&-jc-c {
+		justify-content: center;
+	}
+	&-ai-c {
+		align-items: center;
+	}
+}
